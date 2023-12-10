@@ -1,0 +1,22 @@
+---
+import SiteMenu from "./SiteMenu.astro";
+import Brand from "./Brand.astro";
+---
+
+<header class="Header">
+  <div class="Container">
+    <Brand />
+    <SiteMenu />
+  
+  </div>
+</header>
+
+<style lang="scss">
+  .Header {
+    background-color: #7c7c7c;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+</style>

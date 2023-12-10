@@ -1,0 +1,40 @@
+@use "reset";
+@use "fonts";
+@use "utils";
+
+:root {
+	--main-theme-color: #f9b17a;
+	--font: "Lora", verdana;
+	--container: 1200px;
+}
+
+/* HTML */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.Container {
+  
+}
+
+body {
+  font-family: var(--font);
+  line-height: 1.5;
+  background-color: var(--blue-70);
+  color: var(--white);
+  display: flex;
+  flex-flow: column;
+}
+
+.main {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 2em;
+}

@@ -3,6 +3,7 @@ import ProjectCard from "./ProjectCard.astro";
 ---
 
 <section class="HomeProjects">
+  <h1 class="HomeProjects-title">Conoce nuestros proyectos</h1>
   <div class="Container">
     <ProjectCard />
     <ProjectCard />
@@ -18,5 +19,9 @@ import ProjectCard from "./ProjectCard.astro";
     flex-flow: row wrap;
     justify-content: space-between;
     gap: 1em;
+
+    &-title {
+      text-align: center;
+    }
   }
 </style>

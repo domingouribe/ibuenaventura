@@ -4,13 +4,17 @@
 
 <div class="ProjectCard">
   <a href="#">
-    <img src="/assets/featured-builds/fachada1.jpg" alt="Fachada proyecto" />
+    <img
+      class="ProjectCard-image"
+      src="/assets/featured-builds/fachada1.jpg"
+      alt="Fachada proyecto"
+    />
   </a>
   <p class="ProjectCard-title">1590 Nuestra Señora Del Rosario, Vitacura</p>
   <ul class="ProjectCard-info">
-    <li>1 y 3 dormitorios.</li>
-    <li>Superficiedesde 58 m2</li>
-    <li>Desde UF 7.790</li>
+    <li>1 y 3 <span>dormitorios</span></li>
+    <li>Superficie <span>desde 58 m2</span></li>
+    <li>Desde <span>UF 7.790</span></li>
   </ul>
   <a href="#" class="ProjectCard-cta">Ver proyecto</a>
 </div>
@@ -18,12 +22,52 @@
 <style lang="scss">
   .ProjectCard {
     display: flex;
-    width: 400px;
+    width: 300px;
     flex-flow: column nowrap;
-    background-color: beige;
+    background-color: rgb(209, 209, 209);
+    margin: 1em 0;
+    padding-bottom: 2em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 1px 0px 12px 1px rgba(0, 0, 0, 0.34);
+    -webkit-box-shadow: 1px 0px 12px 1px rgba(0, 0, 0, 0.34);
+    -moz-box-shadow: 1px 0px 12px 1px rgba(0, 0, 0, 0.34);
 
-    img {
+    &-image {
       width: 100%;
+    }
+
+    &-info {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 0.8rem;
+      display: flex;
+      gap: 1em;
+
+      span {
+        display: block;
+      }
+    }
+
+    &-cta {
+      background-color: rgb(0, 0, 0);
+      color: white;
+      border-radius: 2em;
+      margin: 1em 0;
+      padding: 0.5em 3em;
+      text-decoration: none;
+      font-size: 0.8em;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: whitesmoke;
+        color: rgb(0, 0, 0);
+        box-shadow: 1px 0px 12px 1px rgba(0, 0, 0, 0.34);
+    -webkit-box-shadow: 1px 0px 12px 1px rgba(0, 0, 0, 0.34);
+    -moz-box-shadow: 1px 0px 12px 1px rgba(0, 0, 0, 0.34);
+      }
     }
   }
 </style>

@@ -3,19 +3,69 @@
 ---
 
 <footer class="Footer">
-  <div class="Footer-claim">
-    <p>
-      Las imágenes, textos y fotografías han sido elaborados con fines
-      ilustrativos y descriptivos de las características generales del proyecto
-      y producto ofrecido, por lo que no puede ni debe entenderse que
-      constituyen necesariamente una representación exacta de la realidad. La
-      disponibilidad, precio, especificaciones y características pueden cambiar.
-      Lo anterior se informa en virtud de lo señalado en la Ley 19.472.
-    </p>
-  </div>
-  <div class="container">
-    <a class="Brand" href="/">
-      <img src="" alt="" class="Brand-image" />
+  <div class="Container">
+    <div class="Footer-claim">
+      <p>
+        Las imágenes, textos y fotografías han sido elaborados con fines
+        ilustrativos y descriptivos de las características generales del
+        proyecto y producto ofrecido, por lo que no puede ni debe entenderse que
+        constituyen necesariamente una representación exacta de la realidad. La
+        disponibilidad, precio, especificaciones y características pueden
+        cambiar. Lo anterior se informa en virtud de lo señalado en la Ley
+        19.472.
+      </p>
+    </div>
+    <div class="Footer-main">
+      <a class="Brand" href="/">
+      <img src="assets/brand.png" alt="" class="Brand-image" />
     </a>
+    <div class="Footer-contact">
+      <h4>Contacto</h4>
+      <p>
+        Hendaya 263, <br />
+         Las Condes, Santiago <br />
+         telefono +56 9 2211 7800
+      </p>
+    </div>
+    <div class="Footer-socialbar">
+      <a href="" class="Footer-social">
+        <img src="assets/icons/facebook.svg" alt="" />
+      </a>
+      <a href="" class="Footer-social">
+        <img src="assets/icons/instagram.svg" alt="" />
+      </a>
+      <a href="" class="Footer-social">
+        <img src="assets/icons/vimeo.svg" alt="" />
+      </a>
+    </div>
+    </div>
   </div>
 </footer>
+
+<style lang="scss">
+  .Footer {
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: #c6ab66;
+    color: white;
+
+    &-claim {
+      width: 100%;
+    }
+
+    &-main {
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+
+      div, a {
+        flex: 1;
+      }
+
+      svg {
+        color: white;
+      }
+    }
+  }
+</style>

@@ -1,14 +1,16 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Slider from "../components/home/Slider.astro";
-import HeroBar from "../components/HeroBar.astro";
+import HeroBar from "../components/shared/HeroBar.astro";
 import HomeProjects from "../components/shared/HomeProjects.astro";
 ---
 
 <MainLayout>
   <main>
     <Slider />
-    <HeroBar />
+    <div class="Container">
+      <HeroBar />
     <HomeProjects />
+    </div>
   </main>
 </MainLayout>

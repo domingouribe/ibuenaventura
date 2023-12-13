@@ -1,26 +1,26 @@
 ---
-import { projectsItems } from "../../data/database";
+import data from "../../data/database";
 ---
 
-{projectsItems.map((item) => (
-    <div class="ProjectCard">
-      <a href={item.link}>
-        <img src={item.thumbnail} alt={item.alt} class="ProjectCard-image" />
-      </a>
+{data.projectsItems.map((item) => (
+  <div class="ProjectCard" key={item.id}>
+    <a href={item.link}>
+      <img src={item.thumbnail} alt={item.title} class="ProjectCard-image" />
+    </a>
 
-      <p class="ProjectCard-title">{item.title}</p>
-      <ul class="ProjectCard-info">
-        <li>
-          {item.info.number} <span>dormitorios</span>
-        </li>
-        <li>{item.info.surface}</li>
-        <li> {item.info.since} </li>
-      </ul>
-      <a href={item.ctaButton.link} class="ProjectCard-cta">
-        {item.ctaButton.label}
-      </a>
-    </div>
-  ))}
+    <p class="ProjectCard-title">{item.title}</p>
+    <ul class="ProjectCard-info">
+      <li>
+        {item.info.number} <span>dormitorios</span>
+      </li>
+      <li>{item.info.surface}</li>
+      <li> {item.info.since} </li>
+    </ul>
+    <a href={item.ctaButton.link} class="ProjectCard-cta">
+      {item.ctaButton.label}
+    </a>
+  </div>
+))}
 
 <style lang="scss">
   .ProjectCard {

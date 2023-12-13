@@ -1,19 +1,17 @@
 ---
-import { heroBar } from "../../data/database";
+import data from "../../data/database";
 ---
 
 <div class="HeroBar">
   <div class="Container">
-    {
-    heroBar.map((item) => (
-      <div class="HeroBar-item">
+    {data.heroBar.map((item) => (
+      <div class="HeroBar-item" key={item.id}>
         <img class="HeroBar-ico" src={item.icon} alt={item.title} />
         <p class="HeroBar-title">
-          {item.title} <span> {item.text} </span>
+          {item.title} <span>{item.text}</span>
         </p>
       </div>
-    ))
-  }
+    ))}
   </div>
 </div>
 

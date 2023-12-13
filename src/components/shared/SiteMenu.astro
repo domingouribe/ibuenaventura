@@ -1,10 +1,10 @@
 ---
-import { menuItems } from "../../data/database";
+import data from "../../data/database";
 ---
 
 <nav class="Nav">
   {
-    menuItems.map((item) => (
+    data.menuItems.map((item) => (
       <a class="Nav-link" href={item.link}>
         {item.label}
       </a>

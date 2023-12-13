@@ -1,12 +1,12 @@
 ---
-import { footerInfo } from "../../data/database";
+import data from "../../data/database";
 ---
 
 <footer class="Footer">
   <div class="Container">
     <div class="Footer-claim">
       <p>
-        {footerInfo.claim}
+        {data.footerInfo.claim}
       </p>
     </div>
     <div class="Footer-main">
@@ -16,38 +16,23 @@ import { footerInfo } from "../../data/database";
       <div class="Footer-contact">
         <h4>Contacto</h4>
         <p>
-          {footerInfo.contact.address}
-          {footerInfo.contact.phone}
+          {data.footerInfo.contact.address}
+          {data.footerInfo.contact.phone}
         </p>
       </div>
       <div class="Footer-socialbar">
-        <a
-          href={footerInfo.social[0].link}
-          class="Footer-social"
-          title={footerInfo.social[0].title}>
-          <img
-            src={footerInfo.social[0].icon}
-            alt={footerInfo.social[0].title}
-          />
-        </a>
-        <a
-          href={footerInfo.social[1].link}
-          class="Footer-social"
-          title={footerInfo.social[1].title}>
-          <img
-            src={footerInfo.social[1].icon}
-            alt={footerInfo.social[1].title}
-          />
-        </a>
-        <a
-          href={footerInfo.social[2].link}
-          class="Footer-social"
-          title={footerInfo.social[2].title}>
-          <img
-            src={footerInfo.social[2].icon}
-            alt={footerInfo.social[2].title}
-          />
-        </a>
+        {data.footerInfo.social.map(item => (
+          <a
+            href={item.link}
+            class="Footer-social"
+            title={item.title}
+          >
+            <img
+              src={item.icon}
+              alt={item.title}
+            />
+          </a>
+        ))}
       </div>
     </div>
   </div>

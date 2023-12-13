@@ -2,14 +2,10 @@ import { v4 as uuidv4 } from "uuid";
 
 const data = {
   menuItems: [
-    { id: uuidv4(), label: "Somos", link: "/somos" },
-    { id: uuidv4(), label: "Proyectos", link: "/proyectos" },
-    {
-      id: uuidv4(),
-      label: "Recibimos tu propiedad",
-      link: "/recibimos-tu-propiedad",
-    },
-    { id: uuidv4(), label: "Postventa", link: "/postventa" },
+    { id: uuidv4(), label: "Somos",                   link: "/somos" },
+    { id: uuidv4(), label: "Proyectos",               link: "/proyectos" },
+    { id: uuidv4(), label: "Recibimos tu propiedad",  link: "/recibimos-tu-propiedad"},
+    { id: uuidv4(), label: "Postventa",               link: "/postventa" },
   ],
 
   heroBar: [
@@ -56,7 +52,54 @@ const data = {
         link: "nuestra-senora-del-rosario",
       },
     },
-    // ... (otros proyectos)
+    {
+      id: uuidv4(),
+      link: "espoz-vitacura",
+      thumbnail: "assets/featured-builds/fachada1.jpg",
+      title: "4150 Espoz, Vitacura",
+      info: {
+        number: "2, 3 y 4 dormitorios",
+        surface: "Superficie desde 177 m2",
+        since: "Desde UF 20.940",
+      },
+      ctaButton: { label: "Ver proyecto", link: "espoz-vitacura" },
+    },
+    {
+      id: uuidv4(),
+      link: "las-violetas-providencia",
+      thumbnail: "assets/featured-builds/fachada1.jpg",
+      title: "2165 Las Violetas Providencia",
+      info: {
+        number: "1, 2 y 3 dormitorios",
+        surface: "Superficie desde 68 m2",
+        since: "Desde UF 7.110",
+      },
+      ctaButton: { label: "Ver proyecto", link: "las-violetas-providencia" },
+    },
+    {
+      id: uuidv4(),
+      link: "duble",
+      thumbnail: "assets/featured-builds/fachada1.jpg",
+      title: "3800 Duble, Ñuñoa",
+      info: {
+        number: "2 y 3 dormitorios",
+        surface: "Superficie desde 58 m2",
+        since: "Desde UF 7.790",
+      },
+      ctaButton: { label: "Ver proyecto", link: "duble" },
+    },
+    {
+      id: uuidv4(),
+      link: "puerto-varas",
+      thumbnail: "assets/featured-builds/fachada1.jpg",
+      title: "Casa Lago, Puerto Varas",
+      info: {
+        number: "Departamentos y Towhouses",
+        surface: "Superficie desde 58 m2",
+        since: "Desde UF 7.100",
+      },
+      ctaButton: { label: "Ver proyecto", link: "#" },
+    },
   ],
 
   footerInfo: {

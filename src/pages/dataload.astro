@@ -1,0 +1,32 @@
+---
+import Card from "../components/Card.astro";
+import data3Ts from "../data/database.ts";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="https://unpkg.com/open-props" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/open-props/normalize.min.css"
+    />
+
+    <title>Astro</title>
+  </head>
+  <body>
+    <h1>Astro Data Options</h1>
+    <div class="card-wrapper">
+      <Card>
+        <h2>3: Import Local Files</h2>
+        <ul>
+          {data3Ts.map((i) => <li>{i.nationality}</li>)}
+        </ul>
+      </Card>
+    </div>
+  </body>
+</html>
+../data/database.ts

@@ -1,22 +1,25 @@
 ---
-
+import { menuItems } from "../../data/database";
 ---
 
 <nav class="Nav">
-    <a href="somos" class="Nav-link">Somos</a>
-    <a href="proyectos" class="Nav-link">Proyectos</a>
-    <a href="recibimos-tu-propiedad" class="Nav-link">Recibimos tu propiedad</a>
-    <a href="postventa" class="Nav-link">Postventa</a>
+  {
+    menuItems.map((item) => (
+      <a class="Nav-link" href={item.link}>
+        {item.label}
+      </a>
+    ))
+  }
 </nav>
 
 <style lang="scss">
-    .Nav {
-        display: flex;
-        gap: 1rem;
+  .Nav {
+    display: flex;
+    gap: 1rem;
 
-        &-link {
-            color: white;
-            text-decoration: none;
-        }
+    &-link {
+      color: white;
+      text-decoration: none;
     }
+  }
 </style>

@@ -1,62 +1,38 @@
 ---
-
+import { heroBar } from "../../data/database";
 ---
 
 <div class="HeroBar">
   <div class="Container">
-    <div class="HeroBar-item">
-    <img
-      class="HeroBar-ico"
-      src="/assets/icons/pay.svg"
-      alt="Paga tu pie en cuotas"
-    />
-    <p class="HeroBar-title">
-      Paga tu pie en cuotas <span>con tarjeta de crédito</span>
-    </p>
-  </div>
-  <div class="HeroBar-item">
-    <img
-      class="HeroBar-ico"
-      src="/assets/icons/pay.svg"
-      alt="Paga tu pie en cuotas"
-    />
-    <p class="HeroBar-title">
-      Paga tu pie en cuotas <span>con tarjeta de crédito</span>
-    </p>
-  </div>
-  <div class="HeroBar-item">
-    <img
-      class="HeroBar-ico"
-      src="/assets/icons/pay.svg"
-      alt="Paga tu pie en cuotas"
-    />
-    <p class="HeroBar-title">
-      Paga tu pie en cuotas <span>con tarjeta de crédito</span>
-    </p>
-  </div>
-  <div class="HeroBar-item">
-    <img
-      class="HeroBar-ico"
-      src="/assets/icons/pay.svg"
-      alt="Paga tu pie en cuotas"
-    />
-    <p class="HeroBar-title">
-      Paga tu pie en cuotas <span>con tarjeta de crédito</span>
-    </p>
-  </div>
+    {
+    heroBar.map((item) => (
+      <div class="HeroBar-item">
+        <img class="HeroBar-ico" src={item.icon} alt={item.title} />
+        <p class="HeroBar-title">
+          {item.title} <span> {item.text} </span>
+        </p>
+      </div>
+    ))
+  }
   </div>
 </div>
 
-<style lang="scss"> 
-    .HeroBar {
-        background-color: green;
-        display: flex;
-        gap: 1em;
+<style lang="scss">
+  .HeroBar {
+    background-color: green;
+    display: flex;
+    flex-flow: row;
+    gap: 1em;
 
-        &-item {
-          background-color: antiquewhite;
-          margin: 1em 0;
-          padding: 1em;
-        }
+    &-item {
+      background-color: antiquewhite;
+      margin: 1em 0;
+      padding: 1em;
+      width: 300px;
     }
+
+    &-ico {
+      width: 2em;
+    }
+  }
 </style>

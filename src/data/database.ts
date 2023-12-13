@@ -35,7 +35,6 @@ const projectsItems = [
   {
     link: "nuestra-senora-del-rosario",
     thumbnail: "assets/featured-builds/fachada1.jpg",
-    alt: "",
     title: "1590 NUestra Señora Del Rosario",
     info: {
       number: "2 o 3 dormitorios",
@@ -48,9 +47,8 @@ const projectsItems = [
     },
   },
   {
-    link: "",
+    link: "espoz-vitacura",
     thumbnail: "assets/featured-builds/fachada1.jpg",
-    alt: "",
     title: "4150 Espoz, Vitacura",
     info: {
       number: "2, 3 y 4 dormitorios",
@@ -63,9 +61,8 @@ const projectsItems = [
     },
   },
   {
-    link: "",
+    link: "las-violetas-providencia",
     thumbnail: "assets/featured-builds/fachada1.jpg",
-    alt: "",
     title: "2165 Las Violetas Providencia",
     info: {
       number: "1, 2 y 3 dormitorios",
@@ -78,9 +75,8 @@ const projectsItems = [
     },
   },
   {
-    link: "",
+    link: "duble",
     thumbnail: "assets/featured-builds/fachada1.jpg",
-    alt: "",
     title: "3800 Duble, Ñuñoa",
     info: {
       number: "2 y 3  dormitorios",
@@ -93,9 +89,8 @@ const projectsItems = [
     },
   },
   {
-    link: "",
+    link: "puerto-varas",
     thumbnail: "assets/featured-builds/fachada1.jpg",
-    alt: "",
     title: "Casa Lago, Puerto Varas",
     info: {
       number: "Departamentos y Towhouses",
@@ -110,24 +105,32 @@ const projectsItems = [
   
 ];
 
-const footer = [
-  {
-    claim: 'Las imágenes, textos y fotografías han sido elaborados con fines ilustrativos y descriptivos de las características generales del proyecto y producto ofrecido, por lo que no puede ni debe entenderse que constituyen necesariamente una representación exacta de la realidad. La disponibilidad, precio, especificaciones y características pueden cambiar. Lo anterior se informa en virtud de lo señalado en la Ley 19.472.',
-    
 
+const footerInfo = {
+  claim:
+    "Las imágenes, textos y fotografías han sido elaborados con fines ilustrativos y descriptivos de las características generales del proyecto y producto ofrecido, por lo que no puede ni debe entenderse que constituyen necesariamente una representación exacta de la realidad. La disponibilidad, precio, especificaciones y características pueden cambiar. Lo anterior se informa en virtud de lo señalado en la Ley 19.472.",
   contact: {
-      address: 'Hendaya 263, Las Condes, Santiago',
-      phoneIcon: 'assets/icons/dollar.svg',
-      phone: '+56 9 2211 7800',
+    address: "Hendaya 263, Las Condes, Santiago",
+    phoneIcon: "assets/icons/dollar.svg",
+    phone: "+56 9 2211 7800",
+  },
+  social: [
+    {
+      icon: "assets/icons/facebook.svg",
+      link: "https://www.facebook.com/ibuenaventura",
+      title: "Facebook",
     },
-    social: 
-      [
-        { icon: 'assets/icons/facebook.svg', link: '#', title: 'Facebook' },
-        { icon: 'assets/icons/instagram.svg', link: '#', title: 'Instagram' },
-        { icon: 'assets/icons/vimeo-svg', link: '#', title: 'Vimeo' },
-    ]
-  }
-  
-]
+    {
+      icon: "assets/icons/instagram.svg",
+      link: "https://www.instagram.com/inmobiliaria_buenaventura/",
+      title: "Instagram",
+    },
+    {
+      icon: "assets/icons/vimeo.svg",
+      link: "https://vimeo.com/user99719971",
+      title: "Vimeo",
+    },
+  ],
+};
 
-export { menuItems, heroBar, projectsItems, footer };
+export { menuItems, heroBar, projectsItems, footerInfo };

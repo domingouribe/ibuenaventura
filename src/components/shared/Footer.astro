@@ -1,43 +1,54 @@
 ---
-
+import { footerInfo } from "../../data/database";
 ---
 
 <footer class="Footer">
   <div class="Container">
     <div class="Footer-claim">
       <p>
-        Las imágenes, textos y fotografías han sido elaborados con fines
-        ilustrativos y descriptivos de las características generales del
-        proyecto y producto ofrecido, por lo que no puede ni debe entenderse que
-        constituyen necesariamente una representación exacta de la realidad. La
-        disponibilidad, precio, especificaciones y características pueden
-        cambiar. Lo anterior se informa en virtud de lo señalado en la Ley
-        19.472.
+        {footerInfo.claim}
       </p>
     </div>
     <div class="Footer-main">
       <a class="Brand" href="/">
-      <img src="assets/brand.png" alt="" class="Brand-image" />
-    </a>
-    <div class="Footer-contact">
-      <h4>Contacto</h4>
-      <p>
-        Hendaya 263, <br />
-         Las Condes, Santiago <br />
-         telefono +56 9 2211 7800
-      </p>
-    </div>
-    <div class="Footer-socialbar">
-      <a href="" class="Footer-social">
-        <img src="assets/icons/facebook.svg" alt="" />
+        <img src="assets/brand.png" alt="" class="Brand-image" />
       </a>
-      <a href="" class="Footer-social">
-        <img src="assets/icons/instagram.svg" alt="" />
-      </a>
-      <a href="" class="Footer-social">
-        <img src="assets/icons/vimeo.svg" alt="" />
-      </a>
-    </div>
+      <div class="Footer-contact">
+        <h4>Contacto</h4>
+        <p>
+          {footerInfo.contact.address}
+          {footerInfo.contact.phone}
+        </p>
+      </div>
+      <div class="Footer-socialbar">
+        <a
+          href={footerInfo.social[0].link}
+          class="Footer-social"
+          title={footerInfo.social[0].title}>
+          <img
+            src={footerInfo.social[0].icon}
+            alt={footerInfo.social[0].title}
+          />
+        </a>
+        <a
+          href={footerInfo.social[1].link}
+          class="Footer-social"
+          title={footerInfo.social[1].title}>
+          <img
+            src={footerInfo.social[1].icon}
+            alt={footerInfo.social[1].title}
+          />
+        </a>
+        <a
+          href={footerInfo.social[2].link}
+          class="Footer-social"
+          title={footerInfo.social[2].title}>
+          <img
+            src={footerInfo.social[2].icon}
+            alt={footerInfo.social[2].title}
+          />
+        </a>
+      </div>
     </div>
   </div>
 </footer>
@@ -59,7 +70,8 @@
       flex-flow: row wrap;
       justify-content: space-between;
 
-      div, a {
+      div,
+      a {
         flex: 1;
       }
 

@@ -1,0 +1,142 @@
+.Slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 65em;
+    height: auto;
+    margin: auto;
+    font-family: inherit;
+  
+    .Slides-container {
+      display: flex;
+      transition: transform 0.8s ease;
+      max-width: 100%;
+  
+      .Slide {
+        flex: 0 0 100%;
+        box-sizing: border-box;
+        height: 24em;
+        position: relative;
+  
+        &::after {
+          content: "";
+          width: 100%;
+          height: 90%;
+          background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.801) 0%,
+            rgba(0, 0, 0, 0) 100%
+          );
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          z-index: 0;
+        }
+  
+        .Slide-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+  
+        .TextOverlay {
+          position: absolute;
+          top: 20%;
+          right: 10%;
+          text-align: center;
+          color: #fff;
+          z-index: 2;
+          display: flex;
+          flex-flow: column;
+          align-items: flex-end;
+  
+          h2 {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+          }
+  
+          p {
+            font-size: 16px;
+          }
+  
+          .Label {
+            background-color: #181818;
+            color: white;
+            font-size: 0.8rem;
+            padding: 0.4rem 1rem;
+          }
+  
+          &-link {
+            padding: 0.5rem 3rem;
+            border: solid 1px #fff;
+            border-radius: 1rem;
+            background: linear-gradient(to right, #cd303e 0%, #d23c70 100%);
+            text-decoration: none;
+            color: #ffffff;
+            margin: 0.9em 0;
+            display: flex;
+            justify-content: center;
+            flex-shrink: 1;
+            width: fit-content;
+            text-transform: uppercase;
+            font-size: 0.7rem; 
+          }
+        }
+      }
+    }
+  
+    .Control {
+      position: absolute;
+      top: 43%;
+      font-size: 3rem;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: #fff;
+      outline: none;
+      z-index: 1;
+  
+      // &.prev {
+      //   left: 10px;
+      // }
+  
+      // &.next {
+      //   right: 10px;
+      // }
+    }
+  
+    .Dots {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      margin-top: 10px;
+      gap: 0.5em;
+      position: absolute;
+      top: 4em;
+      right: 2em;
+  
+      .Dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #bbb;
+        margin: 0 5px;
+        cursor: pointer;
+        padding: 0.2em;
+        display: flex;
+  
+        &.active {
+          background: #000;
+        }
+      }
+    }
+  
+    // Media Query para pantallas más pequeñas
+    @media (max-width: 768px) {
+      .Slides-container {
+        .Slide {
+          max-width: 100%;
+        }
+      }
+    }
+  }

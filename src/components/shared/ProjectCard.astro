@@ -1,23 +1,26 @@
 ---
-
+import { projectsItems } from "../../data/database";
 ---
 
-<div class="ProjectCard">
-  <a href="#">
-    <img
-      class="ProjectCard-image"
-      src="/assets/featured-builds/fachada1.jpg"
-      alt="Fachada proyecto"
-    />
-  </a>
-  <p class="ProjectCard-title">1590 Nuestra Señora Del Rosario, Vitacura</p>
-  <ul class="ProjectCard-info">
-    <li>1 y 3 <span>dormitorios</span></li>
-    <li>Superficie <span>desde 58 m2</span></li>
-    <li>Desde <span>UF 7.790</span></li>
-  </ul>
-  <a href="#" class="ProjectCard-cta">Ver proyecto</a>
-</div>
+{projectsItems.map((item) => (
+    <div class="ProjectCard">
+      <a href={item.link}>
+        <img src={item.thumbnail} alt={item.alt} class="ProjectCard-image" />
+      </a>
+
+      <p class="ProjectCard-title">{item.title}</p>
+      <ul class="ProjectCard-info">
+        <li>
+          {item.info.number} <span>dormitorios</span>
+        </li>
+        <li>{item.info.surface}</li>
+        <li> {item.info.since} </li>
+      </ul>
+      <a href={item.ctaButton.link} class="ProjectCard-cta">
+        {item.ctaButton.label}
+      </a>
+    </div>
+  ))}
 
 <style lang="scss">
   .ProjectCard {
@@ -65,8 +68,8 @@
         background-color: whitesmoke;
         color: rgb(0, 0, 0);
         box-shadow: 1px 0px 12px 1px rgba(0, 0, 0, 0.34);
-    -webkit-box-shadow: 1px 0px 12px 1px rgba(0, 0, 0, 0.34);
-    -moz-box-shadow: 1px 0px 12px 1px rgba(0, 0, 0, 0.34);
+        -webkit-box-shadow: 1px 0px 12px 1px rgba(0, 0, 0, 0.34);
+        -moz-box-shadow: 1px 0px 12px 1px rgba(0, 0, 0, 0.34);
       }
     }
   }

@@ -8,7 +8,7 @@ import HomeProjects from "../components/shared/HomeProjects.astro";
 
 <MainLayout>
   <main>
-    <Slider slides={data} />
+    <Slider slides={data} client:load />
     <HeroBar />
     <div class="Container">
       <HomeProjects />

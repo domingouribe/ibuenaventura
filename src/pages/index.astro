@@ -1,13 +1,14 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Slider from "../components/home/Slider.astro";
+import Slider from "../components/react/Slider/Slider";
+import data from '../components/react/Slider/SliderData.json'
 import HeroBar from "../components/shared/HeroBar.astro";
 import HomeProjects from "../components/shared/HomeProjects.astro";
 ---
 
 <MainLayout>
   <main>
-    <Slider />
+    <Slider slides={data} />
     <HeroBar />
     <div class="Container">
       <HomeProjects />

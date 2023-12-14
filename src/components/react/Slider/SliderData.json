@@ -1,6 +1,6 @@
 [
     {
-      "image": "src/assets/images/pict1.jpg",
+      "image": "assets/images/pict1.jpg",
       "title": "Nubes en atardecer",
       "description": "Colores morados y amarillos",
       "ctaText": "Ver más",
@@ -8,7 +8,7 @@
       "label": "Texto label de la diapositiva"
     },
     {
-      "image": "src/assets/images/pict2.jpg",
+      "image": "assets/images/pict2.jpg",
       "title": "Nubes coloridas por atardecer",
       "description": "Descripción del slide 1",
       "ctaText": "Ver más",
@@ -16,7 +16,7 @@
       "label": "Texto label de la diapositiva"
     },
     {
-      "image": "src/assets/images/pict3.jpg",
+      "image": "assets/images/pict3.jpg",
       "title": "Vista playa",
       "description": "Descripción del slide 1",
       "ctaText": "Ver más",
@@ -24,7 +24,7 @@
       "label": "Texto label de la diapositiva"
     },
     {
-      "image": "src/assets/images/pict4.jpg",
+      "image": "assets/images/pict4.jpg",
       "title": "Tomates",
       "description": "Descripción del slide 1",
       "ctaText": "Ver más",
@@ -32,7 +32,7 @@
       "label": "Texto label de la diapositiva"
     },
     {
-      "image": "src/assets/images/pict5.jpg",
+      "image": "assets/images/pict5.jpg",
       "title": "Mujer en un campo de flores",
       "description": "Descripción del slide 1",
       "ctaText": "Ver más",
@@ -40,7 +40,7 @@
       "label": "Texto label de la diapositiva"
     },
     {
-      "image": "src/assets/images/pict6.jpg",
+      "image": "assets/images/pict6.jpg",
       "title": "Mujer en un campo de flores",
       "description": "Descripción del slide 6",
       "ctaText": "Ver más",

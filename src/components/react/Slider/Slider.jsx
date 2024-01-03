@@ -4,15 +4,15 @@ import "./Slider.scss";
 const Slider = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-  };
+  // const nextSlide = () => {
+  //   setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+  // };
 
-  const prevSlide = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + slides.length) % slides.length
-    );
-  };
+  // const prevSlide = () => {
+  //   setCurrentIndex(
+  //     (prevIndex) => (prevIndex - 1 + slides.length) % slides.length
+  //   );
+  // };
 
   return (
     <div className="Slider">
@@ -40,12 +40,6 @@ const Slider = ({ slides }) => {
           </div>
         ))}
       </div>
-      {/* <button className="Control prev" onClick={prevSlide}>
-        &lt;
-      </button>
-      <button className="Control next" onClick={nextSlide}>
-        &gt;
-      </button> */}
 
       <div className="Dots">
         {slides.map((_, index) => (
